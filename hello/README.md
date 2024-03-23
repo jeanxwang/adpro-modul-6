@@ -20,4 +20,10 @@ My screen:
 We pull out those differences into separate `if` and `else` lines that will assign the values of the status line and the filename to variables; we can then use those variables unconditionally in the code to read the file and write the response. The previously duplicated code is now outside the `if` and `else` blocks and uses the `status_line` and `filename` variables. This makes it easier to see the difference between the two cases, and it means we have only one place to update the code if we want to change how the file reading and response writing work.
 
 My screen:
-![My Oops Screen](https://cdn.discordapp.com/attachments/1030834426126544907/1221050506026156154/Screenshot_2024-03-23_174808.png?ex=66112ae6&is=65feb5e6&hm=c85071f13a93e692e0da3bb991126569d31eeb88cbbe26586ea6e189be317908&https://cdn.discordapp.com/attachments/1030834426126544907/1221050506026156154/Screenshot_2024-03-23_174808.png?ex=66112ae6&is=65feb5e6&hm=c85071f13a93e692e0da3bb991126569d31eeb88cbbe26586ea6e189be317908&)
+![My Oops Screen](https://cdn.discordapp.com/attachments/1030834426126544907/1221050506026156154/Screenshot_2024-03-23_174808.png?ex=66112ae6&is=65feb5e6&hm=c85071f13a93e692e0da3bb991126569d31eeb88cbbe26586ea6e189be317908&)
+
+### Sleep
+Our second arm in `handle_connection` method matches a request to _/sleep_. When that request is received, the server will sleep for 5 seconds before rendering the successful HTML page.
+
+### Multithreaded Server
+A thread pool efficiently manages multiple tasks by initializing a fixed number of worker threads, each waiting for tasks in a loop. Tasks are submitted to the pool and stored in a queue, with worker threads picking up tasks as they become available. Concurrency is maintained by limiting the number of threads and queuing tasks if all threads are busy. Tasks are executed concurrently, maximizing throughput while preventing resource exhaustion. Safe resource sharing is ensured through mechanisms like '**Arc**' and '**Mutex**'. Overall, a thread pool balances concurrency, resource utilization, and efficient task execution in concurrent programming scenarios, providing a scalable solution for managing asynchronous tasks.

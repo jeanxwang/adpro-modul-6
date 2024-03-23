@@ -24,3 +24,6 @@ My screen:
 
 ### Sleep
 Our second arm in `handle_connection` method matches a request to _/sleep_. When that request is received, the server will sleep for 5 seconds before rendering the successful HTML page.
+
+### Multithreaded Server
+A thread pool efficiently manages multiple tasks by initializing a fixed number of worker threads, each waiting for tasks in a loop. Tasks are submitted to the pool and stored in a queue, with worker threads picking up tasks as they become available. Concurrency is maintained by limiting the number of threads and queuing tasks if all threads are busy. Tasks are executed concurrently, maximizing throughput while preventing resource exhaustion. Safe resource sharing is ensured through mechanisms like '**Arc**' and '**Mutex**'. Overall, a thread pool balances concurrency, resource utilization, and efficient task execution in concurrent programming scenarios, providing a scalable solution for managing asynchronous tasks.

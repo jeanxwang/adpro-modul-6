@@ -15,3 +15,9 @@ The modified `handle_connection` function in Rust continues to read an incoming 
 
 My screen:
 ![My Hello Screen](/assets/images/commit2.png)
+
+### Validating Request and Refactoring
+We pull out those differences into separate `if` and `else` lines that will assign the values of the status line and the filename to variables; we can then use those variables unconditionally in the code to read the file and write the response. The previously duplicated code is now outside the `if` and `else` blocks and uses the `status_line` and `filename` variables. This makes it easier to see the difference between the two cases, and it means we have only one place to update the code if we want to change how the file reading and response writing work.
+
+My screen:
+![My Oops Screen](/assets/images/commit3.png)

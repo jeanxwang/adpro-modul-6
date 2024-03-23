@@ -9,3 +9,9 @@
 - `.take_while(|line| !line.is_empty())`: This is another method call on the iterator that takes elements from the iterator while a predicate is true. Here, it’s taking lines while they are not empty.
 - `.collect()`: This is a method call on the iterator that consumes the iterator and collects the values into a collection. In this case, it’s collecting the values into the `http_request` vector.
 - `println!("Request: {:#?}", http_request);`: This line prints the `http_request` vector to the console. The `:#?` inside the string is a debug format specifier used for pretty-printing `Debug` output.
+
+### `handle_connection` Method 2.0
+The modified `handle_connection` function in Rust continues to read an incoming HTTP request from a TCP stream. However, it now also constructs an HTTP response. This is achieved by reading the contents of a file named "hello.html", calculating its length, and formatting an HTTP response string with a status line, content length header, and the file contents as the body. This response is then written back to the TCP stream.
+
+My screen:
+![My Hello Screen](/assets/images/commit2.png)

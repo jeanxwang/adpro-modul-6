@@ -14,10 +14,10 @@
 The modified `handle_connection` function in Rust continues to read an incoming HTTP request from a TCP stream. However, it now also constructs an HTTP response. This is achieved by reading the contents of a file named "hello.html", calculating its length, and formatting an HTTP response string with a status line, content length header, and the file contents as the body. This response is then written back to the TCP stream.
 
 My screen:
-![My Hello Screen](/assets/images/commit2.png)
+![My Hello Screen](https://cdn.discordapp.com/attachments/1030834426126544907/1221050530848313354/Screenshot_2024-03-23_171351.png?ex=66112aec&is=65feb5ec&hm=b213888916de2aebadf64516cc752ccbd56ff54a96012e83ca2d8e66b18bbd60&)
 
 ### Validating Request and Refactoring
 We pull out those differences into separate `if` and `else` lines that will assign the values of the status line and the filename to variables; we can then use those variables unconditionally in the code to read the file and write the response. The previously duplicated code is now outside the `if` and `else` blocks and uses the `status_line` and `filename` variables. This makes it easier to see the difference between the two cases, and it means we have only one place to update the code if we want to change how the file reading and response writing work.
 
 My screen:
-![My Oops Screen](/assets/images/commit3.png)
+![My Oops Screen](https://cdn.discordapp.com/attachments/1030834426126544907/1221050506026156154/Screenshot_2024-03-23_174808.png?ex=66112ae6&is=65feb5e6&hm=c85071f13a93e692e0da3bb991126569d31eeb88cbbe26586ea6e189be317908&)

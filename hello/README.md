@@ -21,3 +21,6 @@ We pull out those differences into separate `if` and `else` lines that will assi
 
 My screen:
 ![My Oops Screen](https://cdn.discordapp.com/attachments/1030834426126544907/1221050506026156154/Screenshot_2024-03-23_174808.png?ex=66112ae6&is=65feb5e6&hm=c85071f13a93e692e0da3bb991126569d31eeb88cbbe26586ea6e189be317908&)
+
+### Sleep
+Our second arm in `handle_connection` method matches a request to _/sleep_. When that request is received, the server will sleep for 5 seconds before rendering the successful HTML page.
